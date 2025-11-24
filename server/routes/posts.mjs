@@ -4,7 +4,7 @@ import { ObjectId } from "mongodb";
 
 const router = express.Router();
 
-// Get a list of 50 posts
+// Get a list of 50 posts - also was here already, did I import wrong one?
 router.get("/", async (req, res) => {
   let collection = await db.collection("posts");
   let results = await collection.find({})
@@ -13,6 +13,7 @@ router.get("/", async (req, res) => {
 
   res.send(results).status(200);
 });
+
 
 // Fetches the latest posts
 router.get("/latest", async (req, res) => {
